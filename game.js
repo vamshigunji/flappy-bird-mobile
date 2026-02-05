@@ -73,6 +73,7 @@ function createPipe() {
 }
 
 function update(timestamp) {
+    if (!timestamp) timestamp = performance.now();
     if (!gameActive) {
         draw();
         requestAnimationFrame(update);
